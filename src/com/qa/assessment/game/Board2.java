@@ -10,9 +10,10 @@ public class Board2 {
 	ArrayList<ArrayList<Cell>> board = new ArrayList<ArrayList<Cell>>();
 	
 	public Board2() {
-		ArrayList<Cell> rows = new ArrayList<Cell>();
+		ArrayList<Cell> rows;
 		//rows.add(new Cell());
 		for (int i = 0; i < playSize; i++) {
+			rows = new ArrayList<Cell>();
 			for (int j = 0; j < playSize; j++) {
 				rows.add(new Cell());
 			}
