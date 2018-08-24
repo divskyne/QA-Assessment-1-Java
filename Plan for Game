@@ -1,0 +1,9 @@
+Input: north, south, east, west
+Output: Next POI: '5m' > north
+
+//2D array for playing field.
+Random POI generated at different points in the array
+Player spawns at the middle of the array
+Shows nearest POI
+Player chooses direction, position changes
+If player reaches destination show win!
