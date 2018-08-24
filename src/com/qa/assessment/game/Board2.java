@@ -26,13 +26,14 @@ public class Board2 {
 			for (Cell cell : arrayList) {
 				if(cell.containsplayer())
 				{
-					System.out.println(cell.toString());
+					System.out.print(" "+"Y"+" ");
 				}
 				else
 				{
-					//System.out.println("No");
+					System.out.print(" N ");
 				}
 			}
+			System.out.println();
 		}
 	}
 }
