@@ -4,8 +4,10 @@ public class Runner {
 
 	public static void main(String[] args)
 	{
-		Board game = new Board();
-		game.spawnPlayer();
+		Board2 game = new Board2();
+		//game.spawnPlayer();
+		game.printBoard();
+		//game.playDirection("north");
 	}
 
 }

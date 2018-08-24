@@ -24,5 +24,18 @@ public class Cell {
 	public boolean containsPOI() {
 		return containsPOI;
 	}
+	
+	@Override
+	public String toString()
+	{
+		if(this.containsplayer())
+		{
+			return "0";
+		}
+		else
+		{
+			return "1";
+		}
+	}
 
 }
