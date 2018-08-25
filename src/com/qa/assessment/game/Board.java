@@ -48,7 +48,7 @@ public class Board {
 			for (int j = 0; j < playSize; j++) {
 				//land.get(i).get(j);
 				cells.add(new Cell());
-				land.set(j, new Cell());
+				//land.set(j, new Cell());
 			}
 			//land.add(cells);
 		}
