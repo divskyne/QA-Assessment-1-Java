@@ -35,24 +35,30 @@ public class Terrain {
 		player.setPlayerCoordinates(playerCoordinate);
 	}
 	
+	public void updatePlayerPosition(int x, int y)
+	{
+		int [] coordinte = new int[2];
+		coordinte[0] = player.getPlayerCoordinates()[0]+x;
+		coordinte[1] = player.getPlayerCoordinates()[1]+y;
+		terrain.get(player.getPlayerCoordinates()[0]).get(player.getPlayerCoordinates()[1]).setContainsplayer(false);
+		terrain.get(coordinte[0]).get(coordinte[1]).setContainsplayer(true);
+		player.setPlayerCoordinates(coordinte);
+	}
+	
 	public void movePlayer(int direction)
 	{
 		switch (direction) {
 		case 1:
-			terrain.get(player.getPlayerCoordinates()[0]).get(player.getPlayerCoordinates()[1]).setContainsplayer(false);
-			terrain.get(player.getPlayerCoordinates()[0]+1).get(player.getPlayerCoordinates()[1]).setContainsplayer(true);
+			updatePlayerPosition(1, 0);
 			break;
 		case 2:
-			terrain.get(player.getPlayerCoordinates()[0]).get(player.getPlayerCoordinates()[1]).setContainsplayer(false);
-			terrain.get(player.getPlayerCoordinates()[0]-1).get(player.getPlayerCoordinates()[1]).setContainsplayer(true);
+			updatePlayerPosition(-1, 0);
 			break;
 		case 3:
-			terrain.get(player.getPlayerCoordinates()[0]).get(player.getPlayerCoordinates()[1]).setContainsplayer(false);
-			terrain.get(player.getPlayerCoordinates()[0]).get(player.getPlayerCoordinates()[1]+1).setContainsplayer(true);
+			updatePlayerPosition(0, 1);
 			break;
 		case 4:
-			terrain.get(player.getPlayerCoordinates()[0]).get(player.getPlayerCoordinates()[1]).setContainsplayer(false);
-			terrain.get(player.getPlayerCoordinates()[0]+1).get(player.getPlayerCoordinates()[1]-1).setContainsplayer(true);
+			updatePlayerPosition(0, -1);
 			break;
 		}
 	}
